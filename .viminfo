@@ -8,17 +8,31 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/sql
+~MSle0/sql
+
+# Last Substitute Search Pattern:
+~MSle0~&post
+
+# Last Substitute String:
+$lead
 
 # Command Line History (newest to oldest):
-:q!
 :w
+:W
+:1
+::w
+:q!
+:%s/post/lead/g
+::%s/Post/l;ead/
+::%s/Post/Lead/
 :/sql
 :/
 :/DebugKit
 :/Security.salt
 
 # Search String History (newest to oldest):
+? post
+? Post
 ? sql
 ? DebugKit
 ? Security.salt
@@ -31,29 +45,65 @@
 
 # Registers:
 "0	LINE	0
-	/app/Config/database.php
-"1	LINE	0
-		<?php echo $this->element('sql_dump'); ?>
+	echo $this->Form->input('vehicle_');
+""1	LINE	0
+	v
 "2	LINE	0
-	 * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
-""-	CHAR	0
-	/
+	
+"3	LINE	0
+		</div>
+"4	LINE	0
+			</div>
+"5	LINE	0
+				</p>
+"6	LINE	0
+					<?php echo "test" ?>
+"7	LINE	0
+				<p>
+"8	LINE	0
+				?>
+"9	LINE	0
+					);
+"-	CHAR	0
+	;
 
 # File marks:
-'0  2  0  ~/.gitignore
-'1  61  0  ~/app/View/Layouts/default.ctp
-'2  1  0  ~/app/Config/core.php
-'3  1  0  App/Config/core.php
-'4  36  1  ~/app/Controller/AppController.php
-'5  71  1  ~/app/Config/bootstrap.php
-'6  22  19  ~/composer.json
-'7  23  1  ~/composer.json
-'8  230  60  ~/app/Config/core.php
+'0  46  12  ~/app/View/Layouts/default.ctp
+'1  72  9  ~/app/View/Layouts/default.ctp
+'2  54  18  ~/app/View/Layouts/default.ctp
+'3  14  0  ~/app/View/Layouts/default.ctp
+'4  19  1  ~/app/View/Leads/add.ctp
+'5  13  37  ~/app/View/Leads/add.ctp
+'6  5  31  ~/app/View/Leads/add.ctp
+'7  7  0  ~/app/View/Layouts/default.ctp
+'8  74  53  ~/app/View/Layouts/default.ctp
+'9  1  0  ~/app/View/Layouts/default.ctp
 
 # Jumplist (newest first):
+-'  46  12  ~/app/View/Layouts/default.ctp
+-'  1  0  ~/app/View/Layouts/default.ctp
+-'  72  9  ~/app/View/Layouts/default.ctp
+-'  54  18  ~/app/View/Layouts/default.ctp
+-'  14  0  ~/app/View/Layouts/default.ctp
+-'  74  5  ~/app/View/Layouts/default.ctp
+-'  19  1  ~/app/View/Leads/add.ctp
+-'  1  0  ~/app/View/Leads/add.ctp
+-'  13  37  ~/app/View/Leads/add.ctp
+-'  5  31  ~/app/View/Leads/add.ctp
+-'  7  0  ~/app/View/Layouts/default.ctp
+-'  17  31  ~/app/View/Leads/add.ctp
+-'  71  0  ~/app/Controller/LeadsController.php
+-'  1  0  ~/app/Controller/LeadsController.php
+-'  5  15  ~/app/View/Leads/index.ctp
+-'  17  7  ~/app/View/Leads/index.ctp
+-'  22  7  ~/app/View/Leads/index.ctp
+-'  1  0  ~/app/View/Leads/index.ctp
+-'  4  28  ~/app/Controller/LeadsController.php
+-'  1  9  ~/app/Model/Lead.php
+-'  77  21  ~/app/Config/database.php
+-'  1  0  ~/app/Config/database.php
 -'  2  0  ~/.gitignore
--'  61  0  ~/app/View/Layouts/default.ctp
--'  1  0  ~/app/View/Layouts/default.ctp
+-'  77  0  ~/app/View/Layouts/default.ctp
 -'  1  0  ~/app/Config/core.php
 -'  1  0  App/Config/core.php
 -'  36  1  ~/app/Controller/AppController.php
@@ -127,30 +177,166 @@
 -'  1  0  ~/app/Config/bootstrap.php
 -'  22  19  ~/composer.json
 -'  1  0  ~/composer.json
--'  23  1  ~/composer.json
--'  22  19  ~/composer.json
--'  1  0  ~/composer.json
--'  23  1  ~/composer.json
--'  71  1  ~/app/Config/bootstrap.php
--'  69  1  ~/app/Config/bootstrap.php
--'  1  0  ~/app/Config/bootstrap.php
--'  22  19  ~/composer.json
--'  1  0  ~/composer.json
--'  23  1  ~/composer.json
--'  22  19  ~/composer.json
--'  1  0  ~/composer.json
--'  23  1  ~/composer.json
--'  61  0  ~/app/View/Layouts/default.ctp
--'  1  0  ~/app/View/Layouts/default.ctp
--'  1  0  ~/app/Config/core.php
--'  1  0  App/Config/core.php
--'  36  1  ~/app/Controller/AppController.php
--'  1  0  ~/app/Controller/AppController.php
--'  71  1  ~/app/Config/bootstrap.php
--'  69  1  ~/app/Config/bootstrap.php
--'  1  0  ~/app/Config/bootstrap.php
 
 # History of marks within files (newest to oldest):
+
+> ~/app/View/Layouts/default.ctp
+	"	46	12
+	.	26	0
+	+	77	0
+	+	17	0
+	+	1	88
+	+	74	55
+	+	8	0
+	+	8	0
+	+	17	1
+	+	9	1
+	+	8	0
+	+	9	0
+	+	17	0
+	+	8	0
+	+	74	0
+	+	74	45
+	+	1	0
+	+	1	0
+	+	7	9
+	+	74	0
+	+	74	0
+	+	74	0
+	+	74	57
+	+	74	54
+	+	74	0
+	+	74	65
+	+	74	0
+	+	74	0
+	+	74	0
+	+	74	34
+	+	74	0
+	+	74	19
+	+	74	139
+	+	74	0
+	+	74	0
+	+	74	32
+	+	74	0
+	+	1	0
+	+	17	1
+	+	7	0
+	+	6	0
+	+	2	0
+	+	7	10
+	+	7	47
+	+	8	0
+	+	16	16
+	+	8	3
+	+	9	3
+	+	17	3
+	+	17	3
+	+	75	95
+	+	17	1
+	+	20	0
+	+	54	12
+	+	74	0
+	+	54	16
+	+	54	0
+	+	54	0
+	+	54	0
+	+	18	0
+	+	19	20
+	+	54	0
+	+	53	0
+	+	55	54
+	+	72	9
+	+	60	44
+	+	72	0
+	+	61	11
+	+	70	10
+	+	63	5
+	+	70	5
+	+	70	0
+	+	72	0
+	+	71	0
+	+	74	0
+	+	74	20
+	+	74	0
+	+	26	0
+
+> ~/app/View/Leads/add.ctp
+	"	19	1
+	^	16	36
+	.	16	35
+	+	19	0
+	+	3	29
+	+	17	31
+	+	1	11
+	+	18	29
+	+	4	0
+	+	17	29
+	+	5	0
+	+	17	25
+	+	16	0
+	+	12	0
+	+	11	0
+	+	10	0
+	+	9	0
+	+	8	0
+	+	7	0
+	+	6	31
+	+	7	28
+	+	8	29
+	+	9	31
+	+	10	29
+	+	11	36
+	+	12	33
+	+	16	36
+	+	16	33
+	+	17	0
+	+	15	0
+	+	14	0
+	+	13	36
+	+	13	36
+	+	14	36
+	+	15	37
+	+	16	35
+
+> ~/app/Controller/LeadsController.php
+	"	71	0
+	^	71	1
+	.	71	0
+	+	73	0
+	+	1	10
+	+	5	38
+	+	30	0
+	+	19	0
+	+	18	0
+	+	53	0
+	+	54	0
+	+	71	0
+
+> ~/app/View/Leads/index.ctp
+	"	5	15
+	^	5	16
+	.	5	15
+	+	22	0
+	+	13	0
+	+	1	0
+	+	15	59
+	+	5	15
+
+> ~/app/Model/Lead.php
+	"	1	9
+	^	1	10
+	.	1	9
+	+	3	0
+	+	2	0
+	+	1	9
+
+> ~/app/Config/database.php
+	"	77	21
+	^	77	22
+	.	77	21
+	+	75	18
+	+	76	21
+	+	77	21
 
 > ~/.gitignore
 	"	2	0
@@ -159,11 +345,6 @@
 	+	10	21
 	+	1	0
 	+	2	0
-
-> ~/app/View/Layouts/default.ctp
-	"	61	0
-	.	61	0
-	+	61	0
 
 > ~/app/Config/core.php
 	"	1	0
