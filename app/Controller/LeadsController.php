@@ -30,46 +30,46 @@ class LeadsController extends AppController {
         }
     }
 
-public function edit($id = null) {
-    if (!$id) {
-        throw new NotFoundException(__('Invalid lead'));
-    }
-
-    $lead = $this->Lead->findById($id);
-    if (!$lead) {
-        throw new NotFoundException(__('Invalid lead'));
-    }
-
-    if ($this->request->is(array('lead', 'put'))) {
-        $this->Lead->id = $id;
-        if ($this->Lead->save($this->request->data)) {
-            $this->Session->setFlash(__('Your lead has been updated.'));
-            return $this->redirect(array('action' => 'index'));
+    public function edit($id = null) {
+        if (!$id) {
+            throw new NotFoundException(__('Invalid lead'));
         }
-        $this->Session->setFlash(__('Unable to update your lead.'));
+
+        $lead = $this->Lead->findById($id);
+        if (!$lead) {
+            throw new NotFoundException(__('Invalid lead'));
+        }
+
+        if ($this->request->is(array('lead', 'put'))) {
+            $this->Lead->id = $id;
+            if ($this->Lead->save($this->request->data)) {
+                $this->Session->setFlash(__('Your lead has been updated.'));
+                return $this->redirect(array('action' => 'index'));
+            }
+            $this->Session->setFlash(__('Unable to update your lead.'));
+        }
+
+        if (!$this->request->data) {
+            $this->request->data = $lead;
+        }
     }
 
-    if (!$this->request->data) {
-        $this->request->data = $lead;
-    }
-}
+    public function delete($id) {
+        if ($this->request->is('get')) {
+            throw new MethodNotAllowedException();
+        }
 
-public function delete($id) {
-    if ($this->request->is('get')) {
-        throw new MethodNotAllowedException();
-    }
+        if ($this->Lead->delete($id)) {
+            $this->Session->setFlash(
+                __('The lead with id: %s has been deleted.', h($id))
+            );
+        } else {
+            $this->Session->setFlash(
+                __('The lead with id: %s could not be deleted.', h($id))
+            );
+        }
 
-    if ($this->Lead->delete($id)) {
-        $this->Session->setFlash(
-            __('The lead with id: %s has been deleted.', h($id))
-        );
-    } else {
-        $this->Session->setFlash(
-            __('The lead with id: %s could not be deleted.', h($id))
-        );
+        return $this->redirect(array('action' => 'index'));
     }
-
-    return $this->redirect(array('action' => 'index'));
-}
 
 }
