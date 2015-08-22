@@ -115,3 +115,32 @@ cd Plugin/
 ls
 cp -Rf DebugKit/ ../plugins/
 exit
+ls -la
+git init
+ls -la
+git add .
+git commit -a -m 'first commit'
+git config --global user.email "lesterm@gmail.com"
+git config --global user.name "Lester Ariel Mesa"
+git remote add origin https://github.com/mazpe/lafbh.git
+git push -u origin master
+git pull -u origin master
+git pull 
+git push
+git add .
+ls -al
+vi .gitignore
+git commit -a -m 'update gitignore file'
+git push
+git push -u origin master
+git commit -a -m 'leads, model, controller'
+git push
+ls -la
+su -
+ls
+ls -la
+less .gitignore 
+exit
+vi
+ls
+screen
