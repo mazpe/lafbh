@@ -7,6 +7,14 @@ class LeadsController extends AppController {
         $this->set('leads', $this->Lead->find('all'));
     }
 
+    public function getLeads() {
+
+        $leads = $this->Lead->find('all');
+        $data = json_encode($leads);
+
+        return $data;
+    }
+
     public function view($id) {
         if (!$id) {
             throw new NotFoundException(__('Invalid lead'));
@@ -20,12 +28,12 @@ class LeadsController extends AppController {
     }
 
     public function add() {
-        if ($this->request->is('lead')) {
+        if ($this->request->is('post')) {
             $this->Lead->create();
             if ($this->Lead->save($this->request->data)) {
                 $this->Session->setFlash(__('Your lead has been saved.'));
                 return $this->redirect(array('action' => 'index'));
-            }
+            } 
             $this->Session->setFlash(__('Unable to add your lead.'));
         }
     }
