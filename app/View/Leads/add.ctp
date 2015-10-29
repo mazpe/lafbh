@@ -1,3 +1,18 @@
+<link  href="/css/bootstrap-datepicker3.css" rel="stylesheet">
+<script src="/js/bootstrap-datepicker.js"></script>
+<script>
+$(document).ready( function () {
+  $('#sandbox-container .input-group.date').datepicker({
+      autoclose: true,
+      todayHighlight: true
+  });
+
+  $('.datepicker').datepicker({
+      autoclose: true,
+      todayHighlight: true
+  })
+});
+</script>
 <style>
   fieldset.scheduler-border {
       border: 1px groove #ddd !important;
@@ -74,7 +89,7 @@ echo $this->Form->create('Lead', array("action" => "add", "class" => "form-horiz
   <div class="form-group">
     <label class="control-label col-sm-2" for="join_date">Join Date:</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="join_date" placeholder="Enter Join Date" name="data[Lead][join_date]">
+      <input type="text" class="datepicker form-control" data-date-format="mm/dd/yyyy" placeholder="Enter Join Date" name="data[Lead][join_date]">  
     </div>
   </div>
 </fieldset>
@@ -106,8 +121,6 @@ echo $this->Form->create('Lead', array("action" => "add", "class" => "form-horiz
     </div>
   </div>
 </fieldset>
-
-
 
 <?php
 echo $this->Form->end('Save Lead');
