@@ -3,6 +3,10 @@
 {
     width: 700px; /* your width */
 }
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
 </style>
 
 <h1>&nbsp;</h1>
@@ -51,16 +55,16 @@
             ?>
             <fieldset class="scheduler-border">
               <legend class="scheduler-border">Contact Information</legend>
-              <div class="form-group">
+              <div class="form-group required">
                 <label class="control-label col-sm-2" for="name">Name:</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="name" placeholder="Enter name" name="data[Lead][name]">
+                  <input type="text" class="form-control" id="name" required="required" placeholder="Enter name" name="data[Lead][name]">
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group required">
                 <label class="control-label col-sm-2" for="cell_phone">Cell Phone:</label>
                 <div class="col-sm-3">
-                  <input type="cell_phone" class="form-control" id="cell_phone" placeholder="Enter cell phone" name="data[Lead][cell_phone]">
+                  <input type="cell_phone" class="form-control" id="cell_phone" required="required" placeholder="Enter cell phone" name="data[Lead][cell_phone]">
                 </div>
                 <label class="control-label col-sm-3" for="home_phone">Home Phone:</label>
                 <div class="col-sm-4">
@@ -88,22 +92,22 @@
                   <input type="text" class="form-control" id="zipcode" placeholder="Zipcode" name="data[Lead][zipcode]">
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group required">
                 <label class="control-label col-sm-2" for="email">Email:</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="email" placeholder="Enter email" name="data[Lead][email]">
+                  <input type="text" class="form-control" id="email" required="required" placeholder="Enter email" name="data[Lead][email]">
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group required">
                 <label class="control-label col-sm-2" for="laf_rep_code">Rep Code:</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="laf_rep_code" placeholder="Enter LA Fitness Represnative Code" name="data[Lead][laf_rep_code]">
+                  <input type="text" class="form-control" id="laf_rep_code" required="required" placeholder="Enter LA Fitness Represnative Code" name="data[Lead][laf_rep_code]">
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group required">
                 <label class="control-label col-sm-2" for="join_date">Join Date:</label>
                 <div class="col-sm-10">
-                  <input type="text" class="datepicker form-control" data-date-format="mm/dd/yyyy" placeholder="Enter Join Date" name="data[Lead][join_date]">  
+                  <input type="text" class="datepicker form-control" required="required" data-date-format="mm/dd/yyyy" placeholder="Enter Join Date" name="data[Lead][join_date]">  
                 </div>
               </div>
             </fieldset>
@@ -174,6 +178,7 @@ $(document).ready( function () {
             }
         }
     });
+
 
 } );
 </script>
