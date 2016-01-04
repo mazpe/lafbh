@@ -144,3 +144,75 @@ exit
 vi
 ls
 screen
+screen -rx
+ls -la
+git diff
+ls -la
+git push
+git push origin
+git add .
+git commit -a -m 're-initialize'
+git push
+ls -la
+ls -la
+cd app
+ls
+dc COnfig
+cd Config
+ls -la
+cp -Rf database.php.default database.php
+vi database.php
+ls -la
+cd app
+ls
+ls -la
+cd View
+ls
+ls -la
+mkdir Leads
+cd Leads
+ls
+vi index.ctp
+ls -la
+vi add.ctp
+ls -la
+cd ..
+ls
+cd Layouts/
+ls
+vi default.ctp 
+ls -la
+cp -Rf default.ctp default.ctp.bak
+vi default.ctp
+ls -la
+cd ..
+ls
+ls -la
+cd Leads
+ls
+vi add.ctp 
+ls -la
+cd ..
+ls
+cd Layouts/
+ls
+ls -la
+vi default.ctp
+vi default.ctp;
+ls -la
+cd app/
+ls
+cd Con
+cd Controller/
+ls
+ls -la
+vi LeadsController.php
+ls -la
+top
+ls -la
+cd app
+ls
+cd Model/
+ls
+ls -la
+vi Lead.php

@@ -1,11 +1,26 @@
-/app/Config/database.php
-app/Config/database.php
-app/tmp
-app/tmp/*
-app/tmp/logs/*
-app/tmp/sessions/*
-app/tmp/tests/*
-app/tmp/cache/models/*
-app/tmp/cache/persistent/*
-app/tmp/cache/views/*
+/app/tmp
+/app/Config
+/bootstrap/compiled.php
+/vendor
+composer.phar
+.DS_Store
+/.idea
+/_ide_helper.php
+/app/config/packages
+/public/packages
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+.env.example
+*~
+.bash_history
+.viminfo
+*.swp
+
+
+# Optional things
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
 
